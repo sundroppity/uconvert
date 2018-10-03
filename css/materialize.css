@@ -3,6 +3,10 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
+/*IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Bungee|Ubuntu');
+
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -4334,6 +4338,7 @@ nav .brand-logo {
   display: inline-block;
   font-size: 2.1rem;
   padding: 0;
+  font-family: 'Bungee', cursive;
 }
 
 nav .brand-logo.center {
@@ -4403,6 +4408,7 @@ nav ul a {
   display: block;
   padding: 0 15px;
   cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
@@ -4756,6 +4762,7 @@ small {
 .card .card-title {
   font-size: 24px;
   font-weight: 300;
+  color: gray;
 }
 
 .card .card-title.activator {
@@ -4881,6 +4888,8 @@ small {
   left: 0;
   max-width: 100%;
   padding: 24px;
+    background-color: #000000;
+    opacity: 0.7;
 }
 
 .card .card-content {
@@ -5532,6 +5541,7 @@ button.btn-floating {
   height: 32.4px;
   line-height: 32.4px;
   font-size: 13px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .btn-small i {
@@ -8486,10 +8496,19 @@ input[type=range]::-ms-thumb {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
 }
 
 .tap-target {
@@ -8542,10 +8561,19 @@ input[type=range]::-ms-thumb {
 
 .tap-target-wave::after {
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s,
+ -webkit-transform .3s;
   z-index: -1;
 }
 
