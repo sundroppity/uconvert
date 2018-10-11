@@ -11,7 +11,14 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('.sidenav').sidenav();
+        });
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+        $(document).ready(function(){
+            $('select').formSelect();
         });</script>
+
     <script type="text/javascript" src="js/convert.js"></script>
 </head>
 <body>
@@ -34,29 +41,111 @@
     </ul>
 </nav>
 <div class="row">
-    <div class="col s4">
-        <div class="card medium">
-            <div class="card-image">
-                <img src="img/AboutProject.jpg">
-                <span class="card-title">About This Project</span>
+    <div class="col s2"></div>
+    <div class="col s8">
+        <ul class="tabs hide-on-med-and-down">
+            <li class="tab"><a href="#area">Area <img src="./img/area.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#length">Length <img src="./img/length.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#temperature">Temperature <img src="./img/temperature.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#time">Time <img src="./img/time.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#volume">Volume <img src="./img/volume.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#weight">Weight <img src="./img/weight.svg" style="width: 24px; height: 24px;"></a></li>
+        </ul>
+        <div class="collection show-on-medium-and-down hide-on-large-only hide-on-extra-large-only">
+            <a href="#" onClick="$('.tabs').tabs('select', 'area');" class="collection-item"><img src="./img/area.svg" style="width: 24px; height: 24px;"> Area</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'length');" class="collection-item"><img src="./img/length.svg" style="width: 24px; height: 24px;"> Length</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'temperature');" class="collection-item"><img src="./img/temperature.svg" style="width: 24px; height: 24px;"> Temperature</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'time');" class="collection-item"><img src="./img/time.svg" style="width: 24px; height: 24px;"> Time</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'volume');" class="collection-item"><img src="./img/volume.svg" style="width: 24px; height: 24px;"> Volume</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'weight');" class="collection-item"><img src="./img/weight.svg" style="width: 24px; height: 24px;"> Weight</a>
+        </div>
+    </div>
+    <div class="col s2"></div>
+</div>
+<div class="row">
+    <div class="col s2">
+    </div>
+    <div class="col s8">
+        <div id="area" class="card medium">
+            <div class="card-content"><span class="card-title">Area <img src="./img/area.svg" style="width: 32px; height: 32px;"></span>
+                <div class="input-field col s2">
+                    <input id="number1" type="text">
+                    <label for="number1">Number 1</label>
+                </div>
+                <div class="input-field col s2">
+                    <select id="unit1"t>
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="1">Acres</option>
+                        <option value="2">Square Feet</option>
+                        <option value="3">Square Inches</option>
+                        <option value="4">Square Meters</option>
+                    </select>
+                    <label for="unit1">Unit 1</label>
+                </div>
+            <span style="font-size: 24px;" class="col s2">=</span>
+                <div class="input-field col s2">
+                        <input id="number2" type="text">
+                        <label for="number2">Number 2</label>
+                </div>
+                <div class="input-field col s2">
+                    <select id="unit2">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="1">Acres</option>
+                        <option value="2">Square Feet</option>
+                        <option value="3">Square Inches</option>
+                        <option value="4">Square Meters</option>
+                        <option value="5">Square Yards</option>
+                    </select>
+                    <label for="unit2">Unit 2</label>
+                </div>
             </div>
-            <div class="card-content">
-                Interested in how this project came to be? Check out the story!
+
+        </div>
+        <div id="length" class="card medium">
+            <div class="card-content"><span class="card-title">Length <img src="./img/length.svg" style="width: 32px; height: 32px;"></span>
+                Have you found the UConvert tool useful? If so, find out ways that you can help!
             </div>
             <div class="card-action">
-                <a class="waves-green waves-light btn-small green" href="./about.html">
-                    Find out More
+                <a class="waves-green waves-light btn-small green" href="./support.html">
+                    Support Now
                 </a>
             </div>
         </div>
-    </div>
-    <div class="col s4">
-        <div class="card medium">
-            <div class="card-image">
-                <img src="img/Architecture.jpg">
-                <span class="card-title">Support The Project</span>
+        <div id="temperature" class="card medium">
+            <div class="card-content"><span class="card-title">Temperature <img src="./img/temperature.svg" style="width: 32px; height: 32px;"></span>
+                Have you found the UConvert tool useful? If so, find out ways that you can help!
             </div>
-            <div class="card-content">
+            <div class="card-action">
+                <a class="waves-green waves-light btn-small green" href="./support.html">
+                    Support Now
+                </a>
+            </div>
+        </div>
+        <div id="time" class="card medium">
+
+            <div class="card-content"><span class="card-title">Time <img src="./img/time.svg" style="width: 32px; height: 32px;"></span>
+                Have you found the UConvert tool useful? If so, find out ways that you can help!
+            </div>
+            <div class="card-action">
+                <a class="waves-green waves-light btn-small green" href="./support.html">
+                    Support Now
+                </a>
+            </div>
+        </div>
+        <div id="volume" class="card medium">
+
+            <div class="card-content"><span class="card-title">Volume <img src="./img/volume.svg" style="width: 32px; height: 32px;"></span>
+                Have you found the UConvert tool useful? If so, find out ways that you can help!
+            </div>
+            <div class="card-action">
+                <a class="waves-green waves-light btn-small green" href="./support.html">
+                    Support Now
+                </a>
+            </div>
+        </div>
+        <div id="weight" class="card medium">
+
+            <div class="card-content"><span class="card-title">Weight <img src="./img/weight.svg" style="width: 32px; height: 32px;"></span>
                 Have you found the UConvert tool useful? If so, find out ways that you can help!
             </div>
             <div class="card-action">
@@ -66,21 +155,7 @@
             </div>
         </div>
     </div>
-    <div class="col s4">
-         <div class="card medium">
-             <div class="card-image">
-                <img src="img/phonebooth.jpg">
-                 <span class="card-title">Contact Me</span>
-             </div>
-             <div class="card-content">
-                 Feel free to get a hold of me with any questions, feedback, or suggestions regarding this project.
-             </div>
-             <div class="card-action">
-                 <a class="waves-green waves-light btn-small green" href="./contact.html">
-                     Contact Me
-                 </a>
-             </div>
-         </div>
+    <div class="col s2">
     </div>
 </div>
 <footer class="page-footer green">
