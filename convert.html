@@ -7,18 +7,18 @@
     <link href="css/style.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, options);
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });</script>
+    <script type="text/javascript" src="js/convert.js"></script>
 </head>
 <body>
 <nav>
     <div class="nav-wrapper indigo lighten-2">
        <a href="./index.html" class="brand-logo">UConvert</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="about.html">About</a></li>
             <li><a href="support.html">Support UConvert</a></li>
@@ -26,7 +26,7 @@
             <a class="waves-effect waves-light btn-small green" href="convert.html">Convert</a>
         </ul>
     </div>
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-menu">
         <li><a href="about.html">About</a></li>
         <li><a href="support.html">Support UConvert</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -89,5 +89,6 @@
 &copy; 2018 Josh Johnston / <a href="http://jwjwebdesign.com" style="color: #000;"> JwJ Web Design</a>
 </div>
 </footer>
+<script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>
