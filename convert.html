@@ -17,8 +17,8 @@
         });
         $(document).ready(function(){
             $('select').formSelect();
-        });</script>
-
+        });
+            </script>
     <script type="text/javascript" src="js/convert.js"></script>
 </head>
 <body>
@@ -66,40 +66,45 @@
     <div class="col s2">
     </div>
     <div class="col s8">
-        <div id="area" class="card medium">
-            <div class="card-content"><span class="card-title">Area <img src="./img/area.svg" style="width: 32px; height: 32px;"></span>
-                <div class="input-field col s2">
-                    <input id="number1" type="text">
-                    <label for="number1">Number 1</label>
+        <div id="area" class="card">
+            <form name="area">
+                <div class="card-content"><span class="card-title">Area <img src="./img/area.svg" style="width: 32px; height: 32px;"></span>
+                    <div class="input-field inline">
+                        <input id="numberOne" name="numberOne" type="text">
+                        <label for="numberOne">Number 1</label>
+                    </div>
+                    <div class="input-field inline">
+                        <select name="unitOne" id="unitOne">
+                            <option value="" class="disabled selected">Choose your unit</option>
+                            <option value="Acres">Acres</option>
+                            <option value="2">Square Feet</option>
+                            <option value="squareInches">Square Inches</option>
+                            <option value="1">Square Meters</option>
+                            <option value="squareYards">Square Yard</option>
+                        </select>
+                        <label for="unitOne">Unit 1</label>
+                    </div>
+                <span style="font-size: 24px;">=</span>
+                    <div class="input-field inline">
+                            <input disabled id="numberTwo" name="numberTwo" type="text" value="0">
+                            <label for="numberTwo">Number 2</label>
+                    </div>
+                    <div class="input-field inline">
+                        <select name="unitTwo" id="unitTwo">
+                            <option value="" class="disabled selected">Choose your unit</option>
+                            <option value="4">Acres</option>
+                            <option value="2">Square Feet</option>
+                            <option value="3">Square Inches</option>
+                            <option value="1">Square Meters</option>
+                            <option value="5">Square Yards</option>
+                        </select>
+                        <label for="unitTwo">Unit 2</label>
+                    </div>
                 </div>
-                <div class="input-field col s2">
-                    <select id="unit1"t>
-                        <option value="" class="disabled selected">Choose your unit</option>
-                        <option value="1">Acres</option>
-                        <option value="2">Square Feet</option>
-                        <option value="3">Square Inches</option>
-                        <option value="4">Square Meters</option>
-                    </select>
-                    <label for="unit1">Unit 1</label>
+                <div class="card-action">
+                    <button type="button" class="waves-effect btn-small green" onClick="convertArea()">Convert &raquo;</button>
                 </div>
-            <span style="font-size: 24px;" class="col s2">=</span>
-                <div class="input-field col s2">
-                        <input id="number2" type="text">
-                        <label for="number2">Number 2</label>
-                </div>
-                <div class="input-field col s2">
-                    <select id="unit2">
-                        <option value="" class="disabled selected">Choose your unit</option>
-                        <option value="1">Acres</option>
-                        <option value="2">Square Feet</option>
-                        <option value="3">Square Inches</option>
-                        <option value="4">Square Meters</option>
-                        <option value="5">Square Yards</option>
-                    </select>
-                    <label for="unit2">Unit 2</label>
-                </div>
-            </div>
-
+            </form>
         </div>
         <div id="length" class="card medium">
             <div class="card-content"><span class="card-title">Length <img src="./img/length.svg" style="width: 32px; height: 32px;"></span>
@@ -157,12 +162,13 @@
     </div>
     <div class="col s2">
     </div>
-</div>
+< /div>
 <footer class="page-footer green">
 <div class="footer-copyright">
 <div class="container">
 &copy; 2018 Josh Johnston / <a href="http://jwjwebdesign.com" style="color: #000;"> JwJ Web Design</a>
 </div>
+
 </footer>
 <script type="text/javascript" src="js/materialize.js"></script>
 </body>
