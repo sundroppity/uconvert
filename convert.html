@@ -49,7 +49,7 @@
             <li class="tab"><a href="#temperature">Temperature <img src="./img/temperature.svg" style="width: 24px; height: 24px;"></a></li>
             <li class="tab"><a href="#time">Time <img src="./img/time.svg" style="width: 24px; height: 24px;"></a></li>
             <li class="tab"><a href="#volume">Volume <img src="./img/volume.svg" style="width: 24px; height: 24px;"></a></li>
-            <li class="tab"><a href="#weight">Weight <img src="./img/weight.svg" style="width: 24px; height: 24px;"></a></li>
+            <li class="tab"><a href="#mass">Mass <img src="./img/weight.svg" style="width: 24px; height: 24px;"></a></li>
         </ul>
         <div class="collection show-on-medium-and-down hide-on-large-only hide-on-extra-large-only">
             <a href="#" onClick="$('.tabs').tabs('select', 'area');" class="collection-item"><img src="./img/area.svg" style="width: 24px; height: 24px;"> Area</a>
@@ -57,7 +57,7 @@
             <a href="#" onClick="$('.tabs').tabs('select', 'temperature');" class="collection-item"><img src="./img/temperature.svg" style="width: 24px; height: 24px;"> Temperature</a>
             <a href="#" onClick="$('.tabs').tabs('select', 'time');" class="collection-item"><img src="./img/time.svg" style="width: 24px; height: 24px;"> Time</a>
             <a href="#" onClick="$('.tabs').tabs('select', 'volume');" class="collection-item"><img src="./img/volume.svg" style="width: 24px; height: 24px;"> Volume</a>
-            <a href="#" onClick="$('.tabs').tabs('select', 'weight');" class="collection-item"><img src="./img/weight.svg" style="width: 24px; height: 24px;"> Weight</a>
+            <a href="#" onClick="$('.tabs').tabs('select', 'mass');" class="collection-item"><img src="./img/weight.svg" style="width: 24px; height: 24px;"> Mass</a>
         </div>
     </div>
     <div class="col s2"></div>
@@ -71,7 +71,7 @@
                 <div class="card-content"><span class="card-title">Area <img src="./img/area.svg" style="width: 32px; height: 32px;"></span>
                     <div class="input-field inline">
                         <input id="areaNumberOne" name="areaNumberOne" type="text">
-                        <label for="numberOne">Number 1</label>
+                        <label for="areaNumberOne">Number 1</label>
                     </div>
                     <div class="input-field inline">
                         <select name="areaUnitOne" id="areaUnitOne">
@@ -104,7 +104,7 @@
                             <option value="7">Acres</option>
                             <option value="8">Hectares</option>
                         </select>
-                        <label for="unitTwo">Unit 2</label>
+                        <label for="areaUnitTwo">Unit 2</label>
                     </div>
                 </div>
                 <div class="card-action">
@@ -116,91 +116,261 @@
             <form name="length">
             <div class="card-content"><span class="card-title">Length <img src="./img/length.svg" style="width: 32px; height: 32px;"></span>
                 <div class="input-field inline">
-                    <input id="numberOne" name="numberOne" type="text">
-                    <label for="numberOne">Number 1</label>
+                    <input id="lengthNumberOne" name="lengthNumberOne" type="text">
+                    <label for="lengthNumberOne">Number 1</label>
                 </div>
                 <div class="input-field inline">
-                    <select name="unitOne" id="unitOne">
+                    <select name="lengthUnitOne" id="lengthUnitOne">
                         <option value="" class="disabled selected">Choose your unit</option>
-                        <option value="2">Square Inches</option>
-                        <option value="3">Square Feet</option>
-                        <option value="4">Square Yards</option>
-                        <option value="1">Square Meters</option>
-                        <option value="5">Square Miles</option>
-                        <option value="6">Square Kilometers</option>
-                        <option value="7">Acres</option>
-                        <option value="8">Hectares</option>
+                        <option value="2">Nanometer</option>
+                        <option value="3">Micrometer</option>
+                        <option value="4">Millimeter</option>
+                        <option value="5">Centimeter</option>
+                        <option value="6">Inch</option>
+                        <option value="7">Foot</option>
+                        <option value="8">Yard</option>
+                        <option value="1">Meter</option>
+                        <option value="9">Kilometer</option>
+                        <option value="10">Mile</option>
+                        <option value="11">Nautical Mile</option>
                     </select>
-                    <label for="unitOne">Unit 1</label>
+                    <label for="lengthUnitOne">Unit 1</label>
                 </div>
                 <span style="font-size: 24px;">=</span>
                 <div class="input-field inline">
-                    <input disabled id="numberTwo" name="numberTwo" type="text" value="0">
-                    <label for="numberTwo">Number 2</label>
+                    <input disabled id="lengthNumberTwo" name="lengthNumberTwo" type="text" value="0">
+                    <label for="lengthNumberTwo">Number 2</label>
                 </div>
                 <div class="input-field inline">
-                    <select name="unitTwo" id="unitTwo">
+                    <select name="lengthUnitTwo" id="lengthUnitTwo">
                         <option value="" class="disabled selected">Choose your unit</option>
-                        <option value="2">Square Inches</option>
-                        <option value="3">Square Feet</option>
-                        <option value="4">Square Yards</option>
-                        <option value="1">Square Meters</option>
-                        <option value="5">Square Miles</option>
-                        <option value="6">Square Kilometers</option>
-                        <option value="7">Acres</option>
-                        <option value="8">Hectares</option>
+                        <option value="2">Nanometer</option>
+                        <option value="3">Micrometer</option>
+                        <option value="4">Millimeter</option>
+                        <option value="5">Centimeter</option>
+                        <option value="6">Inch</option>
+                        <option value="7">Foot</option>
+                        <option value="8">Yard</option>
+                        <option value="1">Meter</option>
+                        <option value="9">Kilometer</option>
+                        <option value="10">Mile</option>
+                        <option value="11">Nautical Mile</option>
                     </select>
-                    <label for="unitTwo">Unit 2</label>
+                    <label for="lengthUnitTwo">Unit 2</label>
                 </div>
             </div>
             <div class="card-action">
-                <button type="button" class="waves-effect btn-small green" onClick="convertArea()">Convert &raquo;</button>
+                <button type="button" class="waves-effect btn-small green" onClick="convertLength()">Convert &raquo;</button>
             </div>
             </form>
             </div>
 
-        <div id="temperature" class="card medium">
+        <div id="temperature" class="card">
+            <form name="temperature">
             <div class="card-content"><span class="card-title">Temperature <img src="./img/temperature.svg" style="width: 32px; height: 32px;"></span>
-                Have you found the UConvert tool useful? If so, find out ways that you can help!
+                <div class="input-field inline">
+                    <input id="temperatureNumberOne" name="temperatureNumberOne" type="text">
+                    <label for="temperatureNumberOne">Number 1</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="temperatureUnitOne" id="temperatureUnitOne">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="1">Fahrenheit</option>
+                        <option value="2">Centigrade/Celsius</option>
+                        <option value="3">Kelvin</option>
+                    </select>
+                    <label for="temperatureUnitOne">Unit 1</label>
+                </div>
+                <span style="font-size: 24px;">=</span>
+                <div class="input-field inline">
+                    <input disabled id="temperatureNumberTwo" name="temperatureNumberTwo" type="text" value="0">
+                    <label for="temperatureNumberTwo">Number 2</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="temperatureUnitTwo" id="temperatureUnitTwo">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="1">Fahrenheit</option>
+                        <option value="2">Centigrade/Celsius</option>
+                        <option value="3">Kelvin</option>
+                    </select>
+                    <label for="temperatureUnitTwo">Unit 2</label>
+                </div>
             </div>
             <div class="card-action">
-                <a class="waves-green waves-light btn-small green" href="./support.html">
-                    Support Now
-                </a>
+                <button type="button" class="waves-effect btn-small green" onClick="convertTemperature()">Convert &raquo;</button>
             </div>
-        </div>
-        <div id="time" class="card medium">
-
+            </form>
+            </div>
+        <div id="time" class="card">
+            <form name="time"></form>
             <div class="card-content"><span class="card-title">Time <img src="./img/time.svg" style="width: 32px; height: 32px;"></span>
-                Have you found the UConvert tool useful? If so, find out ways that you can help!
+                <div class="input-field inline">
+                <input id="timeNumberOne" name="timeNumberOne" type="text">
+                <label for="timeNumberOne">Number 1</label>
             </div>
-            <div class="card-action">
-                <a class="waves-green waves-light btn-small green" href="./support.html">
-                    Support Now
-                </a>
+            <div class="input-field inline">
+                <select name="timeUnitOne" id="timeUnitOne">
+                    <option value="" class="disabled selected">Choose your unit</option>
+                    <option value="2">Nanosecond</option>
+                    <option value="3">Microsecond</option>
+                    <option value="4">Millisecond</option>
+                    <option value="5">Second</option>
+                    <option value="1">Minute</option>
+                    <option value="6">Hour</option>
+                    <option value="7">Day</option>
+                    <option value="8">Week</option>
+                    <option value="9">Month</option>
+                    <option value="10">Year</option>
+                    <option value="11">Decade</option>
+                    <option value="12">Century</option>
+                </select>
+                <label for="timeUnitOne">Unit 1</label>
             </div>
+            <span style="font-size: 24px;">=</span>
+            <div class="input-field inline">
+                <input disabled id="timeNumberTwo" name="timeNumberTwo" type="text" value="0">
+                <label for="timeNumberTwo">Number 2</label>
+            </div>
+            <div class="input-field inline">
+                <select name="timeUnitTwo" id="timeUnitTwo">
+                    <option value="" class="disabled selected">Choose your unit</option>
+                    <option value="2">Nanosecond</option>
+                    <option value="3">Microsecond</option>
+                    <option value="4">Millisecond</option>
+                    <option value="5">Second</option>
+                    <option value="1">Minute</option>
+                    <option value="6">Hour</option>
+                    <option value="7">Day</option>
+                    <option value="8">Week</option>
+                    <option value="9">Month</option>
+                    <option value="10">Year</option>
+                    <option value="11">Decade</option>
+                    <option value="12">Century</option>
+                </select>
+                <label for="timeUnitTwo">Unit 2</label>
+            </div>
+            </div>
+        <div class="card-action">
+            <button type="button" class="waves-effect btn-small green" onClick="convertTime()">Convert &raquo;</button>
         </div>
-        <div id="volume" class="card medium">
-
+        </form>
+        </div>
+        <div id="volume" class="card">
+            <form name="volume">
             <div class="card-content"><span class="card-title">Volume <img src="./img/volume.svg" style="width: 32px; height: 32px;"></span>
-                Have you found the UConvert tool useful? If so, find out ways that you can help!
+                <div class="input-field inline">
+                    <input id="volumeNumberOne" name="volumeNumberOne" type="text">
+                    <label for="volumeNumberOne">Number 1</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="volumeUnitOne" id="volumeUnitOne">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="2">Milliliter</option>
+                        <option value="3">US Teaspoon</option>
+                        <option value="4">Imperial Teaspoon</option>
+                        <option value="5">US Teaspoon</option>
+                        <option value="6">Cubic Inch</option>
+                        <option value="7">Imperial Tablespoon</option>
+                        <option value="8">Imperial Fluid Ounce</option>
+                        <option value="9">US Fluid Ounce</option>
+                        <option value="10">Cubic Foot</option>
+                        <option value="11">US Legal Cup</option>
+                        <option value="12">Imperial Cup</option>
+                        <option value="13">US Liquid Pint</option>
+                        <option value="14">Imperial Pint</option>
+                        <option value="15">US Liquid Quart</option>
+                        <option value="1">Liter</option>
+                        <option value="16">Imperial Quart</option>
+                        <option value="17">US Liquid Gallon</option>
+                        <option value="18">Imperial Gallon</option>
+                        <option value="19">Cubic Meter</option>
+                    </select>
+                    <label for="volumeUnitOne">Unit 1</label>
+                </div>
+                <span style="font-size: 24px;">=</span>
+                <div class="input-field inline">
+                    <input disabled id="volumeNumberTwo" name="volumeNumberTwo" type="text" value="0">
+                    <label for="volumeNumberTwo">Number 2</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="volumeUnitTwo" id="volumeUnitTwo">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="2">Milliliter</option>
+                        <option value="3">US Teaspoon</option>
+                        <option value="4">Imperial Teaspoon</option>
+                        <option value="5">US Teaspoon</option>
+                        <option value="6">Cubic Inch</option>
+                        <option value="7">Imperial Tablespoon</option>
+                        <option value="8">Imperial Fluid Ounce</option>
+                        <option value="9">US Fluid Ounce</option>
+                        <option value="10">Cubic Foot</option>
+                        <option value="11">US Legal Cup</option>
+                        <option value="12">Imperial Cup</option>
+                        <option value="13">US Liquid Pint</option>
+                        <option value="14">Imperial Pint</option>
+                        <option value="15">US Liquid Quart</option>
+                        <option value="1">Liter</option>
+                        <option value="16">Imperial Quart</option>
+                        <option value="17">US Liquid Gallon</option>
+                        <option value="18">Imperial Gallon</option>
+                        <option value="19">Cubic Meter</option>
+                    </select>
+                    <label for="volumeUnitTwo">Unit 2</label>
+                </div>
             </div>
             <div class="card-action">
-                <a class="waves-green waves-light btn-small green" href="./support.html">
-                    Support Now
-                </a>
+                <button type="button" class="waves-effect btn-small green" onClick="convertVolume()">Convert &raquo;</button>
             </div>
+            </form>
         </div>
-        <div id="weight" class="card medium">
-
-            <div class="card-content"><span class="card-title">Weight <img src="./img/weight.svg" style="width: 32px; height: 32px;"></span>
-                Have you found the UConvert tool useful? If so, find out ways that you can help!
+        <div id="mass" class="card">
+            <div class="card-content"><span class="card-title">Mass <img src="./img/weight.svg" style="width: 32px; height: 32px;"></span>
+                <div class="input-field inline">
+                    <input id="massNumberOne" name="massNumberOne" type="text">
+                    <label for="massNumberOne">Number 1</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="massUnitOne" id="massUnitOne">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="2">Micrograms</option>
+                        <option value="3">Milligrams</option>
+                        <option value="1">Grams</option>
+                        <option value="4">Ounces</option>
+                        <option value="5">Pounds</option>
+                        <option value="6">Kilograms</option>
+                        <option value="7">Stones</option>
+                        <option value="8">US Tons</option>
+                        <option value="9">Metric Tons (tonnes)</option>
+                        <option value="10">Imperial Tons</option>
+                    </select>
+                    <label for="massUnitOne">Unit 1</label>
+                </div>
+                <span style="font-size: 24px;">=</span>
+                <div class="input-field inline">
+                    <input disabled id="massNumberTwo" name="massNumberTwo" type="text" value="0">
+                    <label for="massNumberTwo">Number 2</label>
+                </div>
+                <div class="input-field inline">
+                    <select name="massUnitTwo" id="massUnitTwo">
+                        <option value="" class="disabled selected">Choose your unit</option>
+                        <option value="2">Micrograms</option>
+                        <option value="3">Milligrams</option>
+                        <option value="1">Grams</option>
+                        <option value="4">Ounces</option>
+                        <option value="5">Pounds</option>
+                        <option value="6">Kilograms</option>
+                        <option value="7">Stones</option>
+                        <option value="8">US Tons</option>
+                        <option value="9">Metric Tons (tonnes)</option>
+                        <option value="10">Imperial Tons</option>
+                    </select>
+                    <label for="massUnitTwo">Unit 2</label>
+                </div>
             </div>
             <div class="card-action">
-                <a class="waves-green waves-light btn-small green" href="./support.html">
-                    Support Now
-                </a>
+                <button type="button" class="waves-effect btn-small green" onClick="convertMass()">Convert &raquo;</button>
             </div>
+            </form>
         </div>
     </div>
     <div class="col s2">
@@ -211,7 +381,7 @@
 <div class="container">
 &copy; 2018 Josh Johnston / <a href="http://jwjwebdesign.com" style="color: #000;"> JwJ Web Design</a>
 </div>
-
+</div>
 </footer>
 <script type="text/javascript" src="js/materialize.js"></script>
 </body>
